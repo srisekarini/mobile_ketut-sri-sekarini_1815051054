@@ -1,0 +1,106 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(new MaterialApp(
+    title: "Profil",
+    home: new HalamanSatu(),
+  ));
+}
+
+class HalamanSatu extends StatelessWidget{
+  @override
+  Widget build(BuildContext context){
+    return new Scaffold(
+      backgroundColor: Colors.lightBlueAccent,
+      appBar: new AppBar(
+          backgroundColor: Colors.purpleAccent,
+          title: new Center(
+            child: new Text("Profil"),
+          )
+      ),
+
+      body: Center(
+        child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              ClipRRect(
+                borderRadius: BorderRadius.circular(100.0),
+                child: Image.network(
+                  'https://scontent.fdps3-1.fna.fbcdn.net/v/t1.0-1/cp0/p50x50/81158487_2484140065200904_102347704864079872_o.jpg?_nc_cat=102&_nc_sid=4b352f&_nc_eui2=AeGXOLFquszMWycHuwoqe4o5O7X_OxY4JtaCvz_RmptW4E3KOu-qD2iem1JVitK4-eRWJPb3rIwT56JDFkE7x-eB0byrMyxvMIAZxbsReMI5AQ&_nc_ohc=BH6Fb02j0qAAX-X77bR&_nc_ht=scontent.fdps3-1.fna&oh=2c5b046396299f0da99aeb7c666c847e&oe=5E927262',
+                  width: 150.0,
+                  height: 150.0,
+                  fit: BoxFit.cover,
+                ),
+              ),
+              Text(
+                "Ketut Sri Sekarini", style: TextStyle(color: Colors.black87, fontSize: 20.0, height: 2.0, fontWeight: FontWeight.bold,),),
+              Text(
+                "Pendidikan Teknik Informatika",style: TextStyle(color: Colors.black87, fontSize: 15.0, height: 1.0,),),
+              Text(
+                "1815051054",style: TextStyle(color: Colors.black87, fontSize: 15.0, height: 1.0,),),
+
+              Card(
+                margin: EdgeInsets.only(top: 40.0),
+                child: Row(
+                  children:<Widget> [
+                    Expanded(
+                      child: Card(
+                          color: Colors.lightBlue,
+                          margin: EdgeInsets.only(left: 10.0, right: 10.0),
+                          child: Column (
+                            children: <Widget>[Icon(Icons.my_location, size: 100, color: Colors.grey,),
+                              Text('Singaraja',style: TextStyle(color: Colors.limeAccent, fontSize: 17.0, height: 2.0, fontWeight: FontWeight.bold,),)],
+                          )
+                      ),
+                    ),
+
+                    Expanded(
+                      child: Card(
+                          color: Colors.deepOrangeAccent,
+                          margin: EdgeInsets.only(left: 10.0, right: 10.0, top: 10.0, bottom: 10.0,),
+                          child: Column (
+                            children: <Widget>[Icon(Icons.home, size: 100, color: Colors.blue,),
+                              Text('Banyuning',style: TextStyle(color: Colors.green, fontSize: 17.0, height: 2.0, fontWeight: FontWeight.bold,),)],
+                          )
+                      ),
+                    )
+                  ],
+                ),
+              ),
+
+              Card(
+                margin: EdgeInsets.only(top: 10.0),
+                child: Row(
+                  children:<Widget> [
+                    Expanded(
+                      child: Card(
+                          color: Colors.grey,
+                          margin: EdgeInsets.only(left: 10.0, right: 10.0),
+                          child: Column (
+                            children: <Widget>[Icon(Icons.music_note, size: 100, color: Colors.purple,),
+                              Text('All Genre',style: TextStyle(color: Colors.purple, fontSize: 17.0, height: 2.0, fontWeight: FontWeight.bold,),)],
+                          )
+                      ),
+                    ),
+
+                    Expanded(
+                      child: Card(
+                          color: Colors.lightGreenAccent,
+                          margin: EdgeInsets.only(left: 10.0, right: 10.0, top: 10.0, bottom: 10.0,),
+                          child: Column (
+                            children: <Widget>[Icon(Icons.location_city, size: 100, color: Colors.blueAccent,),
+                              Text('Undiksha',style: TextStyle(color: Colors.blueAccent, fontSize: 17.0, height: 2.0, fontWeight: FontWeight.bold,),)],
+                          )
+                      ),
+                    )
+                  ],
+                ),
+              ),
+
+            ]
+        ),
+      ),
+
+    );
+  }
+}
